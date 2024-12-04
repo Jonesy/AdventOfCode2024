@@ -1,9 +1,8 @@
+import { loadInput } from "../../src/utils.js";
+
 export async function run(date, writer) {
-  const path = `/days/${date}`;
-  const testInputRequest = await fetch(`${path}/test-input.txt`);
-  const testInput = await testInputRequest.text();
-  const inputRequest = await fetch(`${path}/input-1.txt`);
-  const input = await inputRequest.text();
+  const [testErr, testInput] = await loadInput(date, "test-input");
+  const [inputErr, input] = await loadInput(date, "input-1");
 
   console.time("day1");
   const actual1 = processInput(testInput);
