@@ -1,0 +1,11 @@
+input:valid {
+  --bulma-input-h: var(--bulma-success-h);
+  --bulma-input-s: var(--bulma-success-s);
+  --bulma-input-l: var(--bulma-success-l);
+}
+
+input:invalid {
+  --bulma-input-h: var(--bulma-warning-h);
+  --bulma-input-s: var(--bulma-warning-s);
+  --bulma-input-l: var(--bulma-warning-l);
+}
