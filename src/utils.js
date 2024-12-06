@@ -12,11 +12,11 @@ export async function loadInput(date, input) {
   return [err, result];
 }
 
-export function readLines(input) {
+export function readLines(input, deliminter = " ") {
   return input
     .trim()
     .split("\n")
-    .map((l) => l.trim().split(" ").map(Number));
+    .map((l) => l.trim().split(deliminter).map(Number));
 }
 
 export function isAscending(arr) {
